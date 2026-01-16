@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Funny Recreaciones - Eventos y Recreación en Villavicencio Meta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Funny Recreaciones organiza eventos infantiles, familiares y empresariales en Villavicencio, Meta. Fiestas, minitecas, talleres de integración y recreación laboral." />
+
+  <!-- Favicon & Search Engine Logo -->
+  <link rel="icon" href="FRLogo.png" type="image/png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Funny Recreaciones",
+      "url": "https://funnyrecreaciones.com",
+      "logo": "https://funnyrecreaciones.com/FRLogo.png"
+    }
+  </script>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Palette: Modern Fresh */
+      --primary: #FF4757;
+      /* Vibrant Coral Red */
+      --primary-dark: #CE3442;
+      /* Deeper Red for hover */
+      --secondary: #FFA502;
+      /* Warm Sunny Yellow */
+      --bg-light: #F8F9FE;
+      /* Very Light Blue-Grey white */
+      --text-dark: #2F3542;
+      /* Deep Charcoal */
+      --accent: #2ED573;
+      /* Fresh Mint Green */
+      --fuchsia-light: #FF74D8;
+      /* Light Fuchsia */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      /* Clean, modern subtle gradient */
+      background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVBAR */
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      /* Vibrant gradient for logo bg */
+      background: radial-gradient(circle at 30% 20%, #ffffff 0%, #ff7e95 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: var(--primary-dark);
+      /* Updated shadow to match new vibrant primary */
+      box-shadow: 0 8px 20px rgba(255, 71, 87, 0.35);
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-link {
+      font-weight: 500;
+    }
+
+    .btn-wa-nav {
+      border-radius: 999px;
+      padding-inline: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #25d366;
+      border: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 6rem 0 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      /* Cleaner, fresher blob gradient */
+      background: radial-gradient(circle at 30% 30%, #ffffff, #FFEAA7);
+      top: -120px;
+      right: -140px;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .badge-hero {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 3.4vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.08;
+    }
+
+    .hero-title span {
+      color: var(--fuchsia-light);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      max-width: 32rem;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      /* Lighter, fresher yellow background */
+      background: rgba(255, 234, 167, 0.4);
+      font-size: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    .hero-actions {
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary-pill {
+      border-radius: 999px;
+      padding-inline: 1.8rem;
+      font-weight: 600;
+      /* Light Fuchsia Background */
+      background: var(--fuchsia-light);
+      border: none;
+      box-shadow: 0 12px 30px rgba(255, 116, 216, 0.4);
+    }
+
+    .btn-outline-light-pill {
+      border-radius: 999px;
+      padding-inline: 1.6rem;
+      font-weight: 500;
+      border: 1px solid rgba(34, 34, 59, 0.14);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-tagline {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 1.6rem;
+      padding: 1.4rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(15px);
+    }
+
+    .hero-pill {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      /* Fresh white-blueish */
+      background: #eef2f5;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+    }
+
+    .hero-stat h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.1rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-avatars {
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-avatars span {
+      border-radius: 50%;
+      border: 2px solid #fff;
+      /* Soft fresh pink for avatars */
+      background: #ffecf0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: -8px;
+    }
+
+    .hero-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .hero-gallery-grid img {
+      width: 100%;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 0.9rem;
+    }
+
+    /* SECTION GENERIC */
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 1.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      opacity: 0.7;
+      max-width: 32rem;
+    }
+
+    /* SOBRE NOSOTROS */
+    #sobre-nosotros {
+      padding-top: 1rem;
+    }
+
+    .about-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 1.4rem;
+      padding: 1.8rem;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      /* Fresh light minty/yellow background */
+      background: #eefbf3;
+      margin-right: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* SERVICIOS */
+    .service-card {
+      background: #ffffff;
+      border-radius: 1.3rem;
+      padding: 1.6rem;
+      height: 100%;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, translate 0.18s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+    }
+
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 1rem;
+      display: inline-flex;
+      justify-content: center;
+      font-size: 1.2rem;
+      /* Very light cool grey for service icons */
+      background: #f1f2f6;
+      margin-bottom: 0.6rem;
+    }
+
+    /* GALERÍA */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item::after {
+      content: "Ver foto";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: #fff;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0.6rem;
+      opacity: 0;
+      transition: all 0.25s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-item:hover::after {
+      height: 45%;
+      opacity: 1;
+    }
+
+    .gallery-note {
+      font-size: 0.78rem;
+      opacity: 0.8;
+    }
+
+    /* MODAL FOTO */
+    .modal-img {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+
+    /* INSTAGRAM FEED PLACEHOLDER */
+    .instagram-widget {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+      font-size: 0.85rem;
+    }
+
+    .instagram-widget iframe {
+      width: 100%;
+      border: none;
+      min-height: 260px;
+    }
+
+    /* CALENDARIO */
+    .calendar-card {
+      background: #ffffff;
+      border-radius: 1.4rem;
+      padding: 1rem;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.06);
+    }
+
+    .calendar-card iframe {
+      border: 0;
+      width: 100%;
+      height: 550px;
+      border-radius: 1rem;
+    }
+
+    /* CONTACTO */
+    .contact-card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      /* Fresh white-blueish */
+      background: #eef2f5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .contact-form .form-control,
+    .contact-form .form-select {
+      border-radius: 1rem;
+      border-color: rgba(0, 0, 0, 0.08);
+      font-size: 0.9rem;
+    }
+
+    .contact-form .form-control:focus,
+    .contact-form .form-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 0.15rem rgba(255, 94, 154, 0.25);
+    }
+
+    .badge-tag {
+      font-size: 0.74rem;
+      border-radius: 999px;
+      padding: 0.25rem 0.6rem;
+      background: #dfe6e9;
+      /* Neutral cool grey for tags */
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111120;
+      color: #faf0ff;
+      padding: 2.2rem 0 1.2rem;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+
+    .footer-links a {
+      color: #f7d3ff;
+      margin-right: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+
+    /* WHATSAPP FLOATING */
+    .wa-floating {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 999;
+    }
+
+    .wa-floating a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      font-size: 1.7rem;
+    }
+
+    .wa-floating a span {
+      font-size: 1.3rem;
+    }
+
+    /* SOCIAL LINKS (New) */
+    .social-link-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text-dark);
+      background: #ffffff;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease;
+      font-size: 0.85rem;
+      font-weight: 500;
+      min-width: 130px;
+    }
+
+    .social-link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      color: var(--primary);
+      border-color: var(--fuchsia-light);
+    }
+
+    .social-icon-svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    @media (max-width: 767.98px) {
+      .hero {
+        padding-top: 5rem;
+      }
+
+      .hero-card {
+        margin-top: 2rem;
+      }
+
+      .calendar-card iframe {
+        height: 440px;
+      }
+    }
+  </style>
+</head>
+
+<body id="inicio">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">
+        <div class="brand-logo">
+          <img src="FRLogo.png" alt="Logo Funny Recreaciones" />
+        </div>
+        <span>Funny Recreaciones</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre-nosotros">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#calendario">Calendario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+
+        <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20informaci%C3%B3n%20para%20un%20evento."
+          target="_blank" class="btn btn-wa-nav text-white">
+          <span>📱</span> Reservar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="badge-hero mb-3">
+            <span>🎈</span>
+            <span>Eventos infantiles, familiares y empresariales</span>
+          </div>
+          <h1 class="hero-title mb-3">
+            Hacemos que tu evento sea
+            <span>inolvidable, divertido</span>
+            y sin complicaciones.
+          </h1>
+          <p class="hero-subtitle mb-2">
+            Funny Recreaciones organiza experiencias únicas en Villavicencio, Meta:
+            fiestas infantiles, cumpleaños, minitecas, show de recreación, eventos
+            laborales, talleres de crecimiento de equipo y mucho más.
+          </p>
+          <div class="hero-highlight">
+            <span>✅</span>
+            <span>Equipos de recreación profesionales y llenos de energía.</span>
+          </div>
+
+          <div class="d-flex hero-actions mt-4">
+            <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20cotizar%20un%20evento."
+              target="_blank" class="btn btn-primary-pill">
+              Cotizar evento por WhatsApp
+            </a>
+            <a href="#servicios" class="btn btn-outline-light-pill">
+              Ver servicios
+            </a>
+          </div>
+
+          <p class="hero-tagline mt-3">
+            🎉 Ideal para empresas, colegios, conjuntos, familias y marcas que quieren
+            un evento <strong>divertido, ordenado y seguro</strong>.
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-card">
+            <div class="hero-pill">
+              <span>📸</span>
+              <span>Momentos reales de nuestros eventos</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h3 class="h5 mb-1">Diversión sin estrés</h3>
+                <p class="mb-0" style="font-size: 0.9rem;">
+                  Nosotros nos encargamos de la logística recreativa, tú solo disfrutas
+                  con tu equipo, tus hijos o tus invitados.
+                </p>
+              </div>
+              <div class="hero-avatars ms-3">
+                <span>🎉</span>
+                <span>🤹</span>
+                <span>🎈</span>
+              </div>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <h4>+100</h4>
+                <p class="mb-0" style="font-size: 0.78rem;">Eventos realizados</p>
+              </div>
+              <div class="hero-stat">
+                <h4>100%</h4>
+                <p class="mb-0" style="font-size: 0.78rem;">Ambiente familiar</p>
+              </div>
+              <div class="hero-stat">
+                <h4>Empresas</h4>
+                <p class="mb-0" style="font-size: 0.78rem;">Talleres & team building</p>
+              </div>
+            </div>
+
+            <div class="hero-gallery-grid mt-3">
+              <!--
+                IMPORTANTE:
+                Aquí puedes pegar URLs directas de fotos desde tu Instagram o Facebook.
+                Sustituye los src="" de ejemplo por tus propias imágenes.
+              -->
+              <img src="evento1.jpeg" alt="Evento 1 Funny Recreaciones" />
+              <img src="evento2.jpeg" alt="Evento 2 Funny Recreaciones" />
+              <img src="evento3.jpeg" alt="Evento 3 Funny Recreaciones" />
+              <img src="evento4.jpeg" alt="Evento 4 Funny Recreaciones" />
+              <img src="evento5.jpeg" alt="Evento 5 Funny Recreaciones" />
+              <img src="evento6.jpeg" alt="Evento 6 Funny Recreaciones" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="sobre-nosotros">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title">¿Quiénes somos?</h2>
+          <p class="section-subtitle">
+            Somos una empresa de recreación y eventos en Villavicencio, Meta,
+            especializada en crear experiencias alegres, seguras y organizadas
+            para niños, familias y equipos de trabajo.
+          </p>
+          <div class="about-card mt-3">
+            <p style="font-size: 0.95rem;">
+              Combinamos <strong>dinámicas recreativas, juegos, animación, show y
+                actividades de integración</strong> para que cada evento tenga
+              su propia personalidad. Desde una fiesta infantil en casa hasta
+              una jornada de bienestar laboral para toda la empresa.
+            </p>
+            <p style="font-size: 0.95rem;">
+              Nuestro equipo de recreacionistas y facilitadores está formado
+              para trabajar con públicos de diferentes edades, cuidando el
+              lenguaje, la seguridad y el enfoque familiar.
+            </p>
+            <div class="mt-2">
+              <span class="chip">🎈 Fiestas infantiles y cumpleaños</span>
+              <span class="chip">💼 Eventos empresariales y laborales</span>
+              <span class="chip">🤝 Talleres de integración y team building</span>
+              <span class="chip">🎧 Minitecas & hora loca</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3 class="h6 text-uppercase text-muted mb-2">Lo que nos diferencia</h3>
+          <ul class="list-unstyled" style="font-size: 0.95rem;">
+            <li class="mb-2">✅ Enfoque 100% familiar, apto para niños y adultos.</li>
+            <li class="mb-2">✅ Planes ajustados a tu presupuesto y tipo de público.</li>
+            <li class="mb-2">✅ Dinámicas especiales para empresas y equipos de trabajo.</li>
+            <li class="mb-2">✅ Acompañamiento antes, durante y después del evento.</li>
+          </ul>
+          <p class="mt-3" style="font-size: 0.9rem;">
+            Seguimos activos en redes sociales. Tú puedes ver fotos, videos y
+            reseñas de eventos en:
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-3">
+            <a href="https://www.instagram.com/funny_recreacioneventos/" target="_blank" class="social-link-card">
+              <!-- Instagram SVG Gradient -->
+              <svg class="social-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="instaGrad" x1="2" y1="22" x2="22" y2="2">
+                    <stop offset="0" stop-color="#FFC107" />
+                    <stop offset="0.5" stop-color="#F44336" />
+                    <stop offset="1" stop-color="#9C27B0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                  fill="url(#instaGrad)" />
+              </svg>
+              <span>@funny_recreacioneventos</span>
+            </a>
+            <a href="https://www.facebook.com/share/1BaV3bL9Zz/" target="_blank" class="social-link-card">
+              <!-- Facebook SVG Blue -->
+              <svg class="social-icon-svg" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+              <span>Funny Recreaciones</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+        <div>
+          <h2 class="section-title">Servicios de recreación & eventos</h2>
+          <p class="section-subtitle">
+            Diseñamos paquetes según tu tipo de evento, número de invitados y
+            duración. Puedes combinar varios servicios en una sola celebración.
+          </p>
+        </div>
+        <div class="text-md-end mt-3 mt-md-0" style="font-size: 0.85rem;">
+          <span class="badge-tag">🎂 Cumpleaños</span>
+          <span class="badge-tag">🏫 Colegios</span>
+          <span class="badge-tag">🏢 Empresas</span>
+          <span class="badge-tag">👨‍👩‍👧‍👦 Familias</span>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🎂</div>
+            <h3 class="h6">Fiestas infantiles & cumpleaños</h3>
+            <p style="font-size: 0.9rem;">
+              Animación, juegos dirigidos, concursos, coreografías, pintucaritas,
+              show de burbujas y más. Ideal para celebrar a los más pequeños
+              con un ambiente seguro y divertido.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🎧</div>
+            <h3 class="h6">Minitecas & hora loca</h3>
+            <p style="font-size: 0.9rem;">
+              Música, sonido, luces y dinámicas para que nadie se quede sentado.
+              Perfecto para fiestas de adolescentes, grados, celebraciones en
+              conjuntos y empresas.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🎭</div>
+            <h3 class="h6">Shows & animación temática</h3>
+            <p style="font-size: 0.9rem;">
+              Personajes, presentadores y recreacionistas que acompañan toda la
+              jornada con actividades, chistes sanos, retos, bailes y momentos
+              especiales para fotos.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">💼</div>
+            <h3 class="h6">Eventos empresariales & laborales</h3>
+            <p style="font-size: 0.9rem;">
+              Jornadas de bienestar, pausas activas, recreación laboral y
+              actividades para fechas especiales (Día del Niño, Amor y
+              Amistad, Navidad corporativa, etc.).
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🤝</div>
+            <h3 class="h6">Talleres de integración & team building</h3>
+            <p style="font-size: 0.9rem;">
+              Dinámicas diseñadas para fortalecer habilidades de comunicación,
+              trabajo en equipo, liderazgo y confianza entre colaboradores.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">📸</div>
+            <h3 class="h6">Días de recreación & fechas especiales</h3>
+            <p style="font-size: 0.9rem;">
+              Días de sol, integraciones familiares, actividades para colegios,
+              jardines y comunidades. Nos adaptamos al espacio (interior o
+              exterior).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 text-center">
+        <p style="font-size: 0.9rem;" class="mb-2">
+          Cuéntanos qué tipo de evento tienes en mente y armamos un plan a tu medida.
+        </p>
+        <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20un%20plan%20para%20mi%20evento."
+          target="_blank" class="btn btn-primary-pill">
+          Hablar con un asesor 🎉
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <h2 class="section-title">Galería de fotos</h2>
+          <p class="section-subtitle">
+            Algunos momentos de nuestros eventos. Reemplaza estas imágenes con
+            tus fotos reales de Instagram o Facebook.
+          </p>
+          <div class="gallery-grid mt-3">
+            <!--
+              IMPORTANTE:
+              Sustituye los src de ejemplo por URLs directas de tus fotos.
+              Puedes copiarlas desde tus publicaciones de Instagram/Facebook o
+              subirlas a tu hosting.
+            -->
+            <div class="gallery-item" data-img-src="fiesta_infantil.jpeg">
+              <img src="fiesta_infantil.jpeg" alt="Fiesta infantil Funny Recreaciones" />
+            </div>
+            <div class="gallery-item" data-img-src="minitk_horaloca.jpeg">
+              <img src="minitk_horaloca.jpeg" alt="Miniteca y hora loca" />
+            </div>
+            <div class="gallery-item" data-img-src="recreativas.jpeg">
+              <img src="recreativas.jpeg" alt="Evento empresarial y recreación laboral" />
+            </div>
+            <div class="gallery-item" data-img-src="taller_teambuilding.jpeg">
+              <img src="taller_teambuilding.jpeg" alt="Taller de integración y team building" />
+            </div>
+            <div class="gallery-item" data-img-src="recreativas.jpeg">
+              <img src="recreativas.jpeg" alt="Actividades familiares y recreativas" />
+            </div>
+            <div class="gallery-item" data-img-src="tematico.jpeg">
+              <img src="tematico.jpeg" alt="Show y animación temática" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+          <h3 class="h6 text-uppercase text-muted mb-2">Feed de Instagram</h3>
+          <div class="instagram-widget">
+            <!--
+              RECOMENDADO:
+              - Crea un widget gratuito con algún servicio (SnapWidget, Elfsight u otro)
+              - Allí conectas tu cuenta @funny_recreacioneventos
+              - Pega aquí el iframe que te dan para mostrar tus últimas fotos
+            -->
+            <p class="mb-2">
+              Aquí puedes integrar un feed en vivo de tus últimas publicaciones de
+              Instagram para que la página siempre muestre contenido actualizado.
+            </p>
+            <p class="mb-2" style="font-size: 0.8rem;">
+              Por ahora se muestra este ejemplo de espacio reservado.
+            </p>
+            <div style="
+                background: repeating-linear-gradient(
+                  45deg,
+                  #fff7fb,
+                  #fff7fb 10px,
+                  #ffe0f2 10px,
+                  #ffe0f2 20px
+                );
+                border-radius: 0.9rem;
+                padding: 1.5rem;
+                text-align: center;
+              ">
+              <p class="mb-1"><strong>Feed Instagram</strong></p>
+              <p style="font-size: 0.78rem; margin-bottom: 0;">
+                Inserta aquí tu widget de @funny_recreacioneventos
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-3" style="font-size: 0.85rem;">
+            <p class="mb-1">🎥 ¿Quieres destacar un reel o video?</p>
+            <p class="mb-0">
+              Copia el código de inserción (embed) de tu reel de Instagram o video
+              de Facebook y colócalo debajo de este texto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDARIO -->
+  <section id="calendario">
+    <div class="container">
+      <h2 class="section-title">Calendario de eventos</h2>
+      <p class="section-subtitle">
+        Aquí podrás publicar fechas disponibles, eventos abiertos al público o
+        jornadas especiales. El calendario se conecta con la cuenta
+        <strong>funnyrecreationsweb@gmail.com</strong>.
+      </p>
+
+      <div class="calendar-card mt-3">
+        <!--
+          IMPORTANTE:
+          - Debes crear un calendario en Google Calendar con la cuenta funnyrecreationsweb@gmail.com
+          - Configura el calendario como "Público" para que se pueda ver en la web
+          - Ajusta la zona horaria a America/Bogota
+        -->
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=funnyrecreationsweb%40gmail.com&ctz=America%2FBogota"
+          loading="lazy"></iframe>
+      </div>
+      <p class="mt-2" style="font-size: 0.8rem;">
+        Si el calendario no se muestra, revisa los permisos de visibilidad en Google
+        Calendar (debe estar compartido como público).
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-5">
+          <h2 class="section-title">Contacto & reservas</h2>
+          <p class="section-subtitle">
+            Cuéntanos qué tipo de evento quieres organizar y te ayudamos a
+            elegir el mejor plan de recreación para tu presupuesto y tu público.
+          </p>
+
+          <div class="contact-card mt-3">
+            <ul class="contact-list">
+              <li>
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong>Ciudad:</strong>
+                  <div>Villavicencio, Meta - Colombia</div>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">📱</div>
+                <div>
+                  <strong>WhatsApp:</strong>
+                  <div>
+                    <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20informaci%C3%B3n%20para%20un%20evento."
+                      target="_blank">
+                      +57 320 453 1784
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <strong>Correo:</strong>
+                  <div>
+                    <a href="mailto:funnyrecreationsweb@gmail.com">
+                      funnyrecreationsweb@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon">🌐</div>
+                <div>
+                  <strong>Redes sociales:</strong>
+                  <div>
+                    <a href="https://www.instagram.com/funny_recreacioneventos/" target="_blank">
+                      Instagram
+                    </a>
+                    ·
+                    <a href="https://www.facebook.com/share/1BaV3bL9Zz/" target="_blank">
+                      Facebook
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <p class="mt-3 mb-0" style="font-size: 0.86rem;">
+              Horario de atención flexible según evento. Escríbenos por WhatsApp
+              y te respondemos lo antes posible.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-card contact-form">
+            <h3 class="h6 mb-3">Formulario de solicitud</h3>
+            <!--
+              Nota:
+              Este formulario es de ejemplo. Puedes:
+              - Enviarlo a un servicio de formularios (Formspree, Getform, Netlify Forms, etc.)
+              - O manejarlo con tu propio backend.
+            -->
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" placeholder="¿Quién organiza el evento?" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">WhatsApp o teléfono</label>
+                  <input type="tel" class="form-control" placeholder="+57 ..." />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Tipo de evento</label>
+                  <select class="form-select">
+                    <option selected>Selecciona una opción</option>
+                    <option>Fiesta infantil / cumpleaños</option>
+                    <option>Miniteca / hora loca</option>
+                    <option>Evento empresarial / laboral</option>
+                    <option>Taller de integración / team building</option>
+                    <option>Día de recreación / integración familiar</option>
+                    <option>Otro (especificar en el mensaje)</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Fecha tentativa</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label"># Aprox. asistentes</label>
+                  <input type="number" class="form-control" min="1" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Mensaje</label>
+                  <textarea class="form-control" rows="4"
+                    placeholder="Cuéntanos qué estás planeando, el lugar, duración y cualquier detalle importante."></textarea>
+                </div>
+              </div>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <button type="submit" class="btn btn-primary-pill">
+                  Enviar solicitud
+                </button>
+                <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20cotizar%20un%20evento."
+                  target="_blank" class="btn btn-outline-light-pill">
+                  Escribir directo a WhatsApp
+                </a>
+              </div>
+              <p class="mt-2 mb-0" style="font-size: 0.78rem;">
+                Al enviar tus datos aceptas que te contactemos exclusivamente para
+                temas relacionados con tu evento.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>
+          © <span id="year"></span> Funny Recreaciones · Villavicencio, Meta - Colombia
+        </div>
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <div class="wa-floating">
+    <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20informaci%C3%B3n%20para%20un%20evento."
+      target="_blank" aria-label="Escribir por WhatsApp">
+      <span>🟢</span>
+    </a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Año dinámico en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Galería: abrir imagen en modal bootstrap simple
+    document.addEventListener("DOMContentLoaded", function () {
+      var galleryItems = document.querySelectorAll(".gallery-item");
+      var modal;
+      var modalImg;
+
+      function createModal() {
+        var modalEl = document.createElement("div");
+        modalEl.className = "modal fade";
+        modalEl.id = "galleryModal";
+        modalEl.tabIndex = -1;
+        modalEl.innerHTML = `
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-body p-0">
+                <button
+                  type="button"
+                  class="btn-close position-absolute end-0 m-2"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                ></button>
+                <img src="" alt="Foto evento Funny Recreaciones" class="modal-img" />
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modalEl);
+        modal = new bootstrap.Modal(modalEl);
+        modalImg = modalEl.querySelector(".modal-img");
+      }
+
+      galleryItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          var src = item.getAttribute("data-img-src") || item.querySelector("img").src;
+          if (!modal) {
+            createModal();
+          }
+          modalImg.src = src;
+          modal.show();
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
