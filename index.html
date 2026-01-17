@@ -32,35 +32,31 @@
 
   <style>
     :root {
-      /* Palette: Modern Fresh */
+      /* Palette: Modern Premium Fresh */
       --primary: #FF4757;
-      /* Vibrant Coral Red */
       --primary-dark: #CE3442;
-      /* Deeper Red for hover */
       --secondary: #FFA502;
-      /* Warm Sunny Yellow */
       --bg-light: #F8F9FE;
-      /* Very Light Blue-Grey white */
-      --text-dark: #2F3542;
-      /* Deep Charcoal */
+      --text-dark: #1e272e;
       --accent: #2ED573;
-      /* Fresh Mint Green */
       --fuchsia-light: #FF74D8;
-      /* Light Fuchsia */
+      --glass-bg: rgba(255, 255, 255, 0.7);
     }
 
     * {
       box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", sans-serif;
       color: var(--text-dark);
-      /* Clean, modern subtle gradient */
-      background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
+      background: #fff;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     a {
@@ -116,89 +112,134 @@
 
     /* HERO */
     .hero {
-      padding: 6rem 0 2rem;
       position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       overflow: hidden;
+      padding: 0;
+      /* Full height handles padding */
+      color: #fff;
     }
 
-    .hero::before {
-      content: "";
+    .hero-video-bg {
       position: absolute;
-      width: 420px;
-      height: 420px;
-      border-radius: 50%;
-      /* Cleaner, fresher blob gradient */
-      background: radial-gradient(circle at 30% 30%, #ffffff, #FFEAA7);
-      top: -120px;
-      right: -140px;
-      opacity: 0.8;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
       z-index: -1;
     }
 
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      padding-top: 80px;
+      /* Space for fixed navbar */
+      padding-bottom: 40px;
+    }
+
     .badge-hero {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 999px;
       padding: 0.35rem 0.9rem;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       font-size: 0.8rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .hero-title {
-      font-size: clamp(2.3rem, 3.4vw, 3.4rem);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
       font-weight: 800;
-      line-height: 1.08;
+      line-height: 1.1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     .hero-title span {
       color: var(--fuchsia-light);
+      display: block;
     }
 
     .hero-subtitle {
-      font-size: 1.05rem;
-      max-width: 32rem;
+      font-size: 1.15rem;
+      max-width: 35rem;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0.95;
     }
 
     .hero-highlight {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.25rem 0.7rem;
+      padding: 0.25rem 0.8rem;
       border-radius: 999px;
-      /* Lighter, fresher yellow background */
-      background: rgba(255, 234, 167, 0.4);
+      /* Subtle dark translucent for contrast */
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 0.85rem;
       margin-top: 0.75rem;
+      color: #fff;
     }
 
     .hero-actions {
-      gap: 1rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
     }
 
     .btn-primary-pill {
       border-radius: 999px;
-      padding-inline: 1.8rem;
+      padding: 0.8rem 2rem;
       font-weight: 600;
-      /* Light Fuchsia Background */
       background: var(--fuchsia-light);
       border: none;
-      box-shadow: 0 12px 30px rgba(255, 116, 216, 0.4);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(255, 116, 216, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary-pill:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(255, 116, 216, 0.5);
+      color: #fff;
     }
 
     .btn-outline-light-pill {
       border-radius: 999px;
-      padding-inline: 1.6rem;
+      padding: 0.8rem 2rem;
       font-weight: 500;
-      border: 1px solid rgba(34, 34, 59, 0.14);
-      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-light-pill:hover {
+      background: #fff;
+      color: var(--text-dark);
+      transform: translateY(-3px);
     }
 
     .hero-tagline {
       font-size: 0.9rem;
       opacity: 0.8;
+      color: #fff;
     }
 
     .hero-card {
@@ -621,9 +662,17 @@
 
   <!-- HERO -->
   <section class="hero">
+    <!-- Video Background Background -->
+    <video autoplay muted loop playsinline class="hero-video-bg">
+      <source src="Bienvenidos.mp4" type="video/mp4" />
+      Tu navegador no soporta el tag de video.
+    </video>
+    <!-- Overlay for darkening the video -->
+    <div class="hero-overlay"></div>
+
     <div class="container">
       <div class="row align-items-center g-4">
-        <div class="col-lg-6">
+        <div class="col-lg-7">
           <div class="badge-hero mb-3">
             <span>🎈</span>
             <span>Eventos infantiles, familiares y empresariales</span>
@@ -633,80 +682,62 @@
             <span>inolvidable, divertido</span>
             y sin complicaciones.
           </h1>
-          <p class="hero-subtitle mb-2">
+          <p class="hero-subtitle mb-4">
             Funny Recreaciones organiza experiencias únicas en Villavicencio, Meta:
             fiestas infantiles, cumpleaños, minitecas, show de recreación, eventos
             laborales, talleres de crecimiento de equipo y mucho más.
           </p>
-          <div class="hero-highlight">
+          <div class="hero-highlight mb-4">
             <span>✅</span>
             <span>Equipos de recreación profesionales y llenos de energía.</span>
           </div>
 
           <div class="d-flex hero-actions mt-4">
             <a href="https://wa.me/573204531784?text=Hola%20Funny%20Recreaciones,%20quiero%20cotizar%20un%20evento."
-              target="_blank" class="btn btn-primary-pill">
+              target="_blank" class="btn btn-primary-pill btn-lg">
               Cotizar evento por WhatsApp
             </a>
-            <a href="#servicios" class="btn btn-outline-light-pill">
+            <a href="#servicios" class="btn btn-outline-light-pill btn-lg">
               Ver servicios
             </a>
           </div>
 
-          <p class="hero-tagline mt-3">
+          <p class="hero-tagline mt-4">
             🎉 Ideal para empresas, colegios, conjuntos, familias y marcas que quieren
             un evento <strong>divertido, ordenado y seguro</strong>.
           </p>
         </div>
 
-        <div class="col-lg-6">
-          <div class="hero-card">
-            <div class="hero-pill">
+        <div class="col-lg-5">
+          <div class="hero-card"
+            style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(12px); color: #fff;">
+            <div class="hero-pill" style="background: rgba(255,255,255,0.2); color: #fff;">
               <span>📸</span>
-              <span>Momentos reales de nuestros eventos</span>
+              <span>Momentos reales</span>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h3 class="h5 mb-1">Diversión sin estrés</h3>
-                <p class="mb-0" style="font-size: 0.9rem;">
-                  Nosotros nos encargamos de la logística recreativa, tú solo disfrutas
-                  con tu equipo, tus hijos o tus invitados.
-                </p>
+            <div>
+              <h3 class="h5 mb-2">Diversión sin estrés</h3>
+              <p class="mb-3" style="font-size: 0.9rem; opacity: 0.9;">
+                Nosotros nos encargamos de la logística recreativa, tú solo disfrutas
+                con tus invitados.
+              </p>
+            </div>
+
+            <div class="hero-stats mb-3">
+              <div class="hero-stat">
+                <h4 style="color: var(--fuchsia-light);">+100</h4>
+                <p class="mb-0" style="font-size: 0.78rem; opacity: 0.8;">Eventos</p>
               </div>
-              <div class="hero-avatars ms-3">
-                <span>🎉</span>
-                <span>🤹</span>
-                <span>🎈</span>
+              <div class="hero-stat">
+                <h4 style="color: var(--fuchsia-light);">100%</h4>
+                <p class="mb-0" style="font-size: 0.78rem; opacity: 0.8;">Familiar</p>
               </div>
             </div>
 
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <h4>+100</h4>
-                <p class="mb-0" style="font-size: 0.78rem;">Eventos realizados</p>
-              </div>
-              <div class="hero-stat">
-                <h4>100%</h4>
-                <p class="mb-0" style="font-size: 0.78rem;">Ambiente familiar</p>
-              </div>
-              <div class="hero-stat">
-                <h4>Empresas</h4>
-                <p class="mb-0" style="font-size: 0.78rem;">Talleres & team building</p>
-              </div>
-            </div>
-
-            <div class="hero-gallery-grid mt-3">
-              <!--
-                IMPORTANTE:
-                Aquí puedes pegar URLs directas de fotos desde tu Instagram o Facebook.
-                Sustituye los src="" de ejemplo por tus propias imágenes.
-              -->
-              <img src="evento1.jpeg" alt="Evento 1 Funny Recreaciones" />
-              <img src="evento2.jpeg" alt="Evento 2 Funny Recreaciones" />
-              <img src="evento3.jpeg" alt="Evento 3 Funny Recreaciones" />
-              <img src="evento4.jpeg" alt="Evento 4 Funny Recreaciones" />
-              <img src="evento5.jpeg" alt="Evento 5 Funny Recreaciones" />
-              <img src="evento6.jpeg" alt="Evento 6 Funny Recreaciones" />
+            <div class="hero-gallery-grid mt-2">
+              <img src="evento1.jpeg" alt="Evento 1" style="height: 60px; filter: brightness(0.9);" />
+              <img src="evento2.jpeg" alt="Evento 2" style="height: 60px; filter: brightness(0.9);" />
+              <img src="evento3.jpeg" alt="Evento 3" style="height: 60px; filter: brightness(0.9);" />
             </div>
           </div>
         </div>
